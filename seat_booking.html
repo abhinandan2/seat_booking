@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Seat Booking</title>
+	<script src="./js/jquery.js"></script>
+	<script src="http://jsc.mm-lamp.com/jQuery-Seat-Charts/jquery.seat-charts.js"></script> 
+	<link rel="stylesheet" href="http://jsc.mm-lamp.com/jQuery-Seat-Charts/jquery.seat-charts.css">
+	<link rel="stylesheet" type="text/css" href="css/seat_booking.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="container">
+		<div id="seat-map">
+			<div id="legend"></div>
+			<div class="front-indicator">Front</div>
+		</div>
+		<div class="booking-details">
+			<h2>Booking Details</h2>
+			<h3> Selected Seats (<span id="counter">0</span>):</h3>
+			<ul id="selected-seats">
+			</ul>
+			<span class="seat-total">Total: <b>Rs. <span id="total">0</span></b></span>
+			<button class="checkout-button" onclick="seatBookingCallback()"><span>Confirm Seat(s)</span></button>
+		</div>
+	</div>
+</div>
+<!-- <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>  -->
+<script src="js/seat_booking.js"></script>
+</body>
+</html>

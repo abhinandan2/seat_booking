@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color:#fafafa;
+}
+a {
+  color: #b71a4c;
+}
+h1 {
+  text-align: center;
+}
+
+.front-indicator {
+  width: auto;
+  text-align: center;
+  background-color: #f6f6f6;  
+  color: #adadad;
+  padding: 3px;
+  border-radius: 5px;
+}
+.wrapper {
+  width: 100%;
+  text-align: center;
+  height: 97vh;
+}
+.container {
+  margin: 0 auto;
+  width: 330px;
+  border: 1px solid #bfbfbf;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Lato, Roboto, HelveticaNeue, Arial, sans-serif;
+
+}
+
+.booking-details {
+  
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #bfbfbf;
+  box-shadow: 0px -5px 17px -1px rgba(107,107,107,0.5);
+  
+}
+.booking-details h2 {
+  margin: 5px 0 5px 0;
+  font-size: 1.5em;
+  letter-spacing: 0.09em;
+}
+.booking-details h3 {
+  color: #101010cc;
+  font-size: 14px;
+  margin: 0px 0px 5px 0;
+}
+
+div.seatCharts-container {
+  height: 50%;
+  padding: 15px;
+  overflow: auto;
+  flex-grow: 1;
+  user-select: none;
+}
+
+div.seatCharts-cell {
+  color: #182C4E;
+  height: 28px;
+  width: 28px;
+  line-height: 25px;
+  
+}
+div.seatCharts-seat {
+  color: #FFFFFF;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.65);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.65);
+  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.65);
+}
+div.seatCharts-row {
+  height: 35px;
+}
+div.seatCharts-seat.available {
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  color: black;
+}
+div.seatCharts-seat.available.first-class {
+/*  background: url(vip.png); */
+  background-color: #3a78c3;
+  color: white;
+}
+div.seatCharts-seat.focused {
+  background-color: #76B474;
+}
+div.seatCharts-seat.selected {
+  background-color: green;
+}
+div.seatCharts-seat.unavailable {
+  background-color: #472B34;
+}
+div.seatCharts-legend {
+  text-align: left;
+  color: darkslategrey;
+  margin-bottom: 10px;
+ 
+  font-size: small;
+  height: 190px; 
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid #d8d8d8;
+  display: flex;
+  align-items: flex-end;
+}
+div.seatCharts-legend::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 421px;
+  width: 96.5%;
+  border-radius: 50%;
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8; 
+}
+ul.seatCharts-legendList {
+  padding-left: 50px;
+  width: 100%;
+}
+span.seatCharts-legendDescription {
+  margin-left: 5px;
+  line-height: 30px;
+}
+li.seatCharts-legendItem{
+      margin-top: 5px;
+}
+/*.checkout-button {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+}*/
+
+.seat-total {
+  font-size: 1.3em;
+  margin: 0px 0 6px 0;
+}
+
+.cancel-cart-item{
+  color: white;
+  background: crimson;
+  padding: 1px 3px 0;
+  text-decoration: none;
+  border-radius: 30%;
+  font-weight: 700;
+}
+
+#selected-seats {
+  padding: 0 15px;
+  text-align: left;
+  max-height: 90px;
+  overflow-y: scroll;
+  list-style: none;
+  font-size: 1.1em;
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+      padding-top: 7px;
+}
+
+.cart-item__class{
+
+  justify-content: space-between;
+  display: flex;
+  width: 60%;
+}
+
+.cart-item__seat {
+  color: dimgrey;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bc1339; 	
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bc1339; 
+}
+
+.checkout-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  margin: 4px;
+  font-size: 1.3em;
+  padding: 8px;
+  background-image: linear-gradient(20deg,#ff2121 0,#fd8921 100%);
+}
+
+.checkout-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.checkout-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.checkout-button:hover span {
+  padding-right: 25px;
+}
+
+.checkout-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

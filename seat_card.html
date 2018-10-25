@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seat Card</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Pacifico">
+	<link rel="stylesheet" type="text/css" href="css/seat_card.css">
+</head>
+
+<body style="background: antiquewhite;">
+    <div class="card">
+      <img src="./abhi/jeans3.jpg" alt="Denim Jeans" style="width:100%; height: 150px; object-fit: cover; object-position: top;">
+      <h1 style="margin: 0;">Seat Booking</h1>
+      <p class="price">Delhi to Bombay</p>
+      <p>Book your seats now!</p>
+      <p><button onclick="openSeat()">Select Seats</button></p>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-header-title">Select your seats</h2>
+          <span class="modal-close">&times;</span>
+      </div>
+        <iframe src="./seat_booking.html" class="iframe" ></iframe>
+        <div class="modal-footer">
+          <h3 class="modal-footer-title"></h3>
+        </div>
+      </div>
+
+    </div>
+</div>
+<script>
+function openSeat(){
+    modal.style.display = "block";
+}
+
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("modal-close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function seatBookingCallback(a){
+    alert("Total is " + a);
+    modal.style.display = "none";
+}
+</script>
+</body>
+</html>
+
+
+
+<!-- <div class="card-wrapper">
+    <div class="header-background"></div>
+    <div class="header">Seat Booking</div>
+    <div class="footer">
+            <h4 class="seat-text">Book your seats now!</h4>
+            <h4 onclick="openSeat()" class="seat-button"><span>Click Here</span></h4>
+    </div>
+
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-header-title">Select your seats</h2>
+          <span class="modal-close">&times;</span>
+      </div>
+        <iframe src="./seat_booking.html" class="iframe" ></iframe>
+        <div class="modal-footer">
+          <h3 class="modal-footer-title"></h3>
+        </div>
+      </div>
+
+    </div>
+</div> -->
