@@ -38,6 +38,8 @@ var seatJson = {
     legend : [
       [ 'f', 'available',   'First Class (300 Rs)' ],
       [ 'e', 'available',   'Economy Class (200 Rs)'],
+      [ 'e', 'available',   'Economy Class (200 Rs)'],
+      [ 'e', 'available',   'Economy Class (200 Rs)'],
       [ 'f', 'unavailable', 'Already Booked']
     ],
     maxseats: 3,
@@ -54,9 +56,9 @@ var firstSeatLabel = 1;
     // $.getJSON("http://api.db-ip.com/v2/free/self").then(addrInfo =>
     // console.log(addrInfo)
     // );
-    var $cart = $('#selected-seats'),
-    $counter = $('#counter'),
-    $total = $('#total'),
+    var $cart = $('#selected-seats');
+    $counter = $('#counter');
+    $total = $('#total');
     sc = $('#seat-map').seatCharts({
       map: seatJson.map,
       seats: seatJson.seats,
