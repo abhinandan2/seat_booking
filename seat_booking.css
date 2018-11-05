@@ -104,7 +104,7 @@ div.seatCharts-seat.selected {
   background-color: green;
 }
 div.seatCharts-seat.unavailable {
-  background-color: #472B34;
+  background-color: #777777;
 }
 div.seatCharts-legend {
   text-align: left;
